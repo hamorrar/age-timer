@@ -1,15 +1,14 @@
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
-
-const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
 const Main = imports.ui.main;
-const GLib = imports.gi.GLib;
 const Mainloop = imports.mainloop;
 
-let panelAgeText, panelButton, timeout;
+const MILLI_TO_YEARS = 31556952000;
 
-let counter = 0;
+// YYYY-MM-DDTHH:MM:SS in 24hr format.
+const bdayString = "2000-05-20T00:15:00";
+
+let panelAgeText, panelButton, timeout;
 
 function init() {
     panelButton = new St.Bin({
@@ -26,9 +25,9 @@ function enable() {
 }
 
 function calculateAge() {
-    let bday = new Date('2000-05-20T00:15:00');
-    let now = new Date();
-    panelAgeText.set_text(((now-bday)/31556952000).toFixed(9).toString());
+    const bday = new Date(bdayString);
+    const now = new Date();
+    panelAgeText.set_text(((now-bday)/MILLI_TO_YEARS).toFixed(9).toString());
     return true;
 }
 
