@@ -1,1 +1,5 @@
 /* Add your custom extension styling here */
+.panelAgeText{
+    font-family: "Cascadia Code";
+    text-align: auto;
+}
