@@ -1,6 +1,6 @@
 # age-timer
 
-## Get the files:
+## Get the files
 ### Download zip
 1. Download zip. Unzip and extract the files within ``age-timer-main`` to ``~/.local/share/gnome-shell/extensions/age-timer@hamorrar.github.io/``.
 
