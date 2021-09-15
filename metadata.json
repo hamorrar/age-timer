@@ -1,0 +1,8 @@
+{
+  "name": "Age Timer",
+  "description": "Displays current age counting up as a reminder that you are only getting older.",
+  "uuid": "age-timer@hamorrar.github.io",
+  "shell-version": [
+    "3.36"
+  ]
+}
